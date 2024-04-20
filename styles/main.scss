@@ -1,0 +1,141 @@
+// global variables
+
+$primary-color: #f0eff4;
+$secondary-color: #5448c8;
+$tertiary-color: #3b0d11;
+$highlight-color: #9f7e69;
+$highlight-green-color: #6eeb83;
+
+//mixins
+
+@mixin paddingLayout {
+  padding: 0 50px;
+}
+
+@mixin clearFix {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+//layout styles
+
+body {
+  background-color: $primary-color;
+
+  header {
+    background-color: lighten($highlight-color, 30%);
+    @include paddingLayout();
+  }
+
+  main {
+    @include paddingLayout();
+  }
+
+  footer {
+    float: left;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    background-color: lighten($highlight-color, 30%);
+    @include paddingLayout();
+
+    &::after {
+      @include clearFix();
+    }
+  }
+}
+
+//header Styles
+
+header {
+  margin: 0;
+  color: $tertiary-color;
+
+  img {
+    display: block;
+    float: left;
+    border: 1px solid $highlight-color;
+    border-radius: 50%;
+    margin: 1rem 0.5rem 1rem 0rem;
+  }
+
+  h1 {
+    float: left;
+    font-size: 1.75rem;
+    margin: 1rem 0rem;
+  }
+
+  &::after {
+    @include clearFix();
+  }
+}
+
+//main section styles
+
+main {
+  margin: 2rem 0rem;
+  @include paddingLayout();
+
+  //Form Area
+
+  .form-area {
+    color: $tertiary-color;
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    input[type="text"] {
+      padding: 0.25rem 0.5rem;
+      font-size: 1.125rem;
+      width: 40%;
+      border-radius: 10px;
+    }
+
+    button[type="submit"] {
+      padding: 0.25rem 0.5rem;
+      font-size: 1.125rem;
+      border-radius: 5px;
+      background-color: $secondary-color;
+      color: $primary-color;
+      transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $secondary-color;
+      }
+    }
+  }
+
+  //Lists of To-do
+  .toDo-Listing {
+    margin-top: 2rem;
+
+    ul {
+      li {
+        padding: 0.25rem 0rem;
+        font-size: 1.5rem;
+
+        button {
+          display: inine-block;
+          padding: 0.125rem 0.25rem;
+          margin: 0 0.25rem;
+          vertical-align: text-bottom;
+          border-radius: 5px;
+          font-size: 0.9rem;
+          color: $tertiary-color;
+          background-color: $highlight-green-color;
+          transition: all 0.25s ease-in-out;
+
+          &:hover {
+            background-color: $tertiary-color;
+            color: $highlight-green-color;
+          }
+        }
+
+        &::marker {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}

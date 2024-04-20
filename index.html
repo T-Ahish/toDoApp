@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+
+  <body>
+    <header>
+      <img src="./resources/logo/myLogoLarge.png" alt="Site Logo" />
+      <h1>My To-Do's App</h1>
+    </header>
+
+    <main>
+      <div class="form-area">
+        <form id="toDosForm">
+          <label for="addNewToDo">New To-Do:</label>
+          <input
+            type="text"
+            name="addNewToDo"
+            id="addNewToDo"
+            autocomplete="off"
+          />
+
+          <button type="submit">Add</button>
+        </form>
+      </div>
+
+      <div class="toDo-Listing">
+        <ul id="toDoList"></ul>
+      </div>
+    </main>
+
+    <footer>
+      <p>made with ❤️ by Ahish @2024</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

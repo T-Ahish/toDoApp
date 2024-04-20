@@ -1,0 +1,100 @@
+body {
+  background-color: #f0eff4;
+}
+body header {
+  background-color: #dbcec6;
+  padding: 0 50px;
+}
+body main {
+  padding: 0 50px;
+}
+body footer {
+  float: left;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  background-color: #dbcec6;
+  padding: 0 50px;
+}
+body footer::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+header {
+  margin: 0;
+  color: #3b0d11;
+}
+header img {
+  display: block;
+  float: left;
+  border: 1px solid #9f7e69;
+  border-radius: 50%;
+  margin: 1rem 0.5rem 1rem 0rem;
+}
+header h1 {
+  float: left;
+  font-size: 1.75rem;
+  margin: 1rem 0rem;
+}
+header::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+main {
+  margin: 2rem 0rem;
+  padding: 0 50px;
+}
+main .form-area {
+  color: #3b0d11;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+main .form-area input[type=text] {
+  padding: 0.25rem 0.5rem;
+  font-size: 1.125rem;
+  width: 40%;
+  border-radius: 10px;
+}
+main .form-area button[type=submit] {
+  padding: 0.25rem 0.5rem;
+  font-size: 1.125rem;
+  border-radius: 5px;
+  background-color: #5448c8;
+  color: #f0eff4;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+main .form-area button[type=submit]:hover {
+  background-color: #f0eff4;
+  color: #5448c8;
+}
+main .toDo-Listing {
+  margin-top: 2rem;
+}
+main .toDo-Listing ul li {
+  padding: 0.25rem 0rem;
+  font-size: 1.5rem;
+}
+main .toDo-Listing ul li button {
+  display: inine-block;
+  padding: 0.125rem 0.25rem;
+  margin: 0 0.25rem;
+  vertical-align: text-bottom;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #3b0d11;
+  background-color: #6eeb83;
+  transition: all 0.25s ease-in-out;
+}
+main .toDo-Listing ul li button:hover {
+  background-color: #3b0d11;
+  color: #6eeb83;
+}
+main .toDo-Listing ul li::marker {
+  color: #5448c8;
+}
+
+/*# sourceMappingURL=main.css.map */
